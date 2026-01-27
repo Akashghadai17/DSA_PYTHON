@@ -1,1 +1,21 @@
+n=74667
+num=n
+count=0
+while num>0:
+    num=num//10
+    count=count+1
+print(count)
 
+output
+------
+5
+
+Explanation:
+------------
+n=74667
+num=n           #duplicate varible store n data
+count=0         #count varible store how many digit but initialize by 0
+while num>0:    #loop work between (num==0)
+    num=num//10  #remove remender from back
+    count=count+1 #if remove one digit add 1 in count varible
+print(count)  #print who many digit
