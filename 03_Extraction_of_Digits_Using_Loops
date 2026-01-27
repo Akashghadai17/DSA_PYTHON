@@ -7,6 +7,10 @@ while num>0:
     num=num//10
 print(l1)
 
+output
+------
+[7, 6, 6, 4, 7]
+
 Explanation
 ----------
 n=74667
