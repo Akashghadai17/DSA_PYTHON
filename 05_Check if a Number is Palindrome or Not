@@ -1,0 +1,32 @@
+n=5445
+num=n
+result=0
+while num>0:
+    last=num%10
+    result=(result*10)+last
+    num=num//10
+if result==n:
+    print("Palindrome")
+else:
+    print("Not palindrome")
+
+output
+------
+Palindrome
+
+Explanation
+-----------
+n=5445
+num=n
+result=0
+while num>0:
+    last=num%10                #last digit
+    result=(result*10)+last    #result variable (0*10)=0+last(5)=5
+                               #result(5*10)50+4=54
+                               #result(54*10)540+4=544
+                               #result(544*10)5440+5=5445
+    num=num//10                #remove remainder
+if result==n:
+    print("Palindrome")
+else:
+    print("Not palindrome")
