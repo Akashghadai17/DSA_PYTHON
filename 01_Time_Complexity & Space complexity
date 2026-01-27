@@ -1,0 +1,86 @@
+1)Time Complexity
+---
+Rate of increase in time with respect to input.
+
+|    /
+|   /
+|  /
+| /
+|/)This rate called time complexity.
+---
+Bio Oh Notation
+---
+For calculating the time complexity.
+O( )
+  |
+ Time complexity
+How to calculate time complexity
+
+for i in range(1,6):
+    print(i)
+--Time complexity calculate by using how much operation done in code.
+--In this code 1st i=1(operation=1)
+                2nd i<6(Operation=2)
+                3rd print(i)(Operation=3)
+
+--Total 5 times work means 3*5=15, so timer complexity=O(15)
+
+i)Always calculate TC in terms of worst case.
+--Time complexity 3 case-1)Best Case 2)Average Case 3)Worst Case
+Example:1
+age=90
+if age>=80:                    1
+    print("Ssenior")           2 O(2)(Best Case)
+elif age>=60 and age<80:
+    print("Senior")
+elif age>=24 and age<60:
+    print("Working")
+elif age>=16 and age<24:
+    print("Teen")
+else:
+    print("Baby")
+
+Example:2
+age=10
+if age>=80:                    1
+    print("Ssenior")           2
+elif age>=60 and age<80:       3
+    print("Senior")            4
+elif age>=24 and age<60:       5
+    print("Working")           6
+elif age>=16 and age<24:       7
+    print("Teen")              8
+else:                          9
+    print("Baby")              10 O(10) Worst Case
+
+Average case---->Best+Worst/2=Average Case
+
+ii)Avoid constant values/ iii)Avoid Lower Values
+
+TYPES OF TIME COMPLEXITY
+---
+BIG-O(o)          THETA(0)    OMEGA(-^-)
+   |                 |           |
+Worst             Average      Best
+[Upper Bound]              [Lower Bound]
+
+
+Example1
+---
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        ------Code
+        --------
+TC=O(N2)
+
+2)SPACE COMPLEXITY
+---
+--Memory space big-oh notation.
+
+Auxiliary Space-->The extra space used to solve the problem.
+Input Space-->The space used to store the input.
+
+
+x=5,y=10,z=15   --Input Space
+total= x+y+z     --Auxiliary Space
+print(total)
