@@ -1,0 +1,19 @@
+n=74667
+num=n
+l1=[]
+while num>0:
+    last_num=num%10
+    l1.append(last_num)
+    num=num//10
+print(l1)
+
+Explanation
+----------
+n=74667
+num=n #duplicate that store num value
+l1=empty list
+while num>0:                  #loop if num>0
+    last_num=num%10           #last_num variable store num%10=remender
+    l1.append(last_num)       #append in list l1(last_digit)
+    num=num//10               #remove remender from num/ remove last digit from  num
+print(l1)                     #print list 
