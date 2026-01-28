@@ -1,0 +1,53 @@
+Explaination
+-----------
+n=153
+total num=3 
+--1 power(3)=1
+--5 power(3)=125
+--3 power(3)=27
+total=(1+125+27)=153 
+ITS A ARMSTRONG NUMBER
+
+CODE 1
+------
+n = 153
+x = n
+num = n
+count = 0
+total = 0
+
+# count number of digits
+while num > 0:
+    count += 1
+    num //= 10
+
+# calculate armstrong sum
+while x > 0:
+    last = x % 10
+    total += last ** count
+    x //= 10
+
+# check armstrong
+if total == n:
+    print("Armstrong number")
+else:
+    print("Not an Armstrong number")
+
+
+CODE 2
+------
+n=153
+num=n
+total=0
+count=len(str(n))
+
+while num>0:
+    last=num%10
+    total=total+(last**count)
+    num=num//10
+if total==n:
+    print("Armstrong")
+else:
+    print("No")
+
+
