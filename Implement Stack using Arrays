@@ -1,0 +1,64 @@
+What is stack?
+--------------
+Can store any type of data.
+
+What is mechanism is used?
+--------------------------
+LIFO[Last in First Out]
+_________________
+|_______________|<----------LAST IN FIRST OUT(LIFO-STACK)
+|_______________|
+|_______________|
+|_______________|
+|_______________|
+|_______________|
+|_______________|
+
+OPERATIONS 
+----------
+push()
+pop()
+top()
+size()
+
+Implement Stack using Arrays 
+----------------------------
+class Stack:
+    def __init__(self):
+        self.items=[]
+    def is_empty(self):
+        return len(self.items)==0
+    def push(self,item):
+        self.items.append(item)
+    def pop(self):
+        if len(self.items)==0:
+            return "cannot pop, stack is empty"
+        x=self.items.pop()
+        return x
+    def top(self):
+        if len(self.items)==0:
+            return "Cannot check top, stack is empty"
+        return self.items[-1]
+    def size(self):
+        return len(self.items)
+        
+stack=Stack()
+stack.push(5)
+stack.push(10)
+stack.push(15)
+
+print(f"Stack content = {stack.items}")
+print(f"poped item = {stack.pop()}")
+print(f"Stack content = {stack.items}")
+print(f"Top item after pop = {stack.top()}")
+print(f"Is empty = {stack.is_empty()}")
+
+output
+------
+Stack content = [5, 10, 15]
+poped item = 15
+Stack content = [5, 10]
+Top item after pop = 10
+Is empty = False
+
+
