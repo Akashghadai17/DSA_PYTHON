@@ -1,0 +1,51 @@
+Store Frequency in Dictionary
+-----------------------------
+Frequency/Dictionary
+
+-Check how many times the number repeat.
+
+code(TC-O(N))
+----
+l1=[1,2,3,4,5,6,1,2,2,2,4,5,6,8,7,6,5,7,8,2,3]
+frequency_map=dict()
+
+for i in range(0,len(l1)):
+    if l1[i] in frequency_map:
+        frequency_map[l1[i]]+=1
+    else:
+        frequency_map[l1[i]]=1
+
+for i,j in frequency_map.items():
+    print(i,j)
+
+output
+------
+1 2
+2 5
+3 2
+4 2
+5 3
+6 3
+8 2
+7 2
+
+
+           OR(Optimal solution)
+l1=[1,2,3,4,5,6,1,2,2,2,4,5,6,8,7,6,5,7,8,2,3]
+hash_map=dict()
+
+for i in range(0,len(l1)):
+    hash_map[l1[i]]=hash_map.get(l1[i],0)+1
+    
+print(hash_map.items())
+
+output
+------
+dict_items([(1, 2), (2, 5), (3, 2), (4, 2), (5, 3), (6, 3), (8, 2), (7, 2)])
+
+
+
+
+
+
+
