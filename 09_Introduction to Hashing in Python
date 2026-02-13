@@ -1,0 +1,140 @@
+Introduction to Hashing in Python
+---------------------------------
+-Prestoring values into same datastructure like List/Dictionary/set and then fetching it.
+
+Q1)Check how many num repeart in n .
+n=[5,3,2,2,1,5,5,7,5,10]
+m=[10,111,1,9,5,67,2]
+
+Constants
+---------
+1<=n[i]=10
+n can have 10 pow 8 elements.
+m can have 10 pow 8 elements.
+
+
+code
+----
+n=[5,3,2,2,1,5,5,7,5,10]
+m=[10,111,1,9,5,67,2]
+
+for i in m:
+    count=0
+    for j in n:
+        if j==i:
+            count+=1
+    print(count)
+
+output
+------
+1
+0
+1
+0
+4
+0
+2
+
+Constants
+---------
+1<=n[i]=10
+n can have 10 pow 8 elements.
+m can have 10 pow 8 elements.
+
+
+OPTIMAL SOLUTION
+----------------
+Constants
+---------
+1<=n[i]=10
+n can have 10 pow 8 elements.
+m can have 10 pow 8 elements.
+
+-1 to in n (Create a list 1 index with 0 value and +1 in index if value is present)
+
+code
+----
+n=[5,3,2,2,1,5,5,7,5,10]
+m=[10,111,1,9,5,67,2]
+
+l1=[0]*11
+l2=[]
+for i in n:
+    l1[i]+=1
+    
+for j in m:
+    if j>10:
+        print(0)
+    else:
+        print(l1[j])
+
+output
+-----
+1
+0
+1
+0
+4
+0
+2
+
+Using dictionary if lenth not define use this
+----------------------------------------------
+code
+----
+n=[5,3,2,2,1,5,5,7,5,10]
+m=[10,111,1,9,5,67,2]
+
+hash_dict=dict()
+
+for i in range(0,len(n)):
+    if n[i] in hash_dict:
+        hash_dict[n[i]]+=1
+    else:
+        hash_dict[n[i]]=1
+    
+for j in range(0,len(m)):
+    if m[j] in hash_dict:
+        print(m[j]," - > ",hash_dict[m[j]])
+    else:
+        print(m[j]," - > ",0)
+
+output
+------
+10  - >  1
+111  - >  0
+1  - >  1
+9  - >  0
+5  - >  4
+67  - >  0
+2  - >  2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
