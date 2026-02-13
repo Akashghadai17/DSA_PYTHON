@@ -109,6 +109,33 @@ output
 67  - >  0
 2  - >  2
 
+Character hashing
+-----------------
+s="azyxyyzaaaa"
+q=["d","a","y","x"]
+
+code
+----
+s="azyxyyzaaaa"
+q=["d","a","y","x"]
+
+hash_dict=dict()
+
+for x in s:
+    if x in hash_dict:
+        hash_dict[x]+=1
+    else:
+        hash_dict[x]=1
+
+for ch in q:
+    print(ch,"->",hash_dict.get(ch,0))
+
+output
+------
+d -> 0
+a -> 5
+y -> 3
+x -> 1
 
 
 
